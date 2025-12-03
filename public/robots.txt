@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mnt-egdbe-plm-hold.vercel.app/sitemap.xml

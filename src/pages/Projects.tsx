@@ -1,5 +1,6 @@
 import React from 'react';
 import { Wrench, Home, Building, AlertTriangle } from 'lucide-react';
+import { buildUnsplashSrcSet, gallerySizes } from '@/lib/utils';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -128,6 +129,12 @@ const Projects: React.FC = () => {
                       src={project.image}
                       alt={project.title}
                       className="w-full h-48 object-cover"
+                      loading="lazy"
+                      decoding="async"
+                      width={800}
+                      height={600}
+                      srcSet={buildUnsplashSrcSet(project.image)}
+                      sizes={gallerySizes}
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
                         target.src = `https://via.placeholder.com/400x300/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`;

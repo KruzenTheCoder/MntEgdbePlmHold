@@ -190,6 +190,18 @@ const Home: React.FC = () => {
                   src="https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=1200&q=80"
                   alt="Mount Edgecombe Plumbling Team"
                   className="w-full h-80 object-cover rounded-lg shadow-lg"
+                  loading="lazy"
+                  decoding="async"
+                  width={1200}
+                  height={600}
+                  srcSet={
+                    [
+                      'https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=480&q=70 480w',
+                      'https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=800&q=75 800w',
+                      'https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=1200&q=80 1200w',
+                    ].join(', ')
+                  }
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = `https://via.placeholder.com/800x600/e5e7eb/6b7280?text=Professional+Plumbing+Team`;
