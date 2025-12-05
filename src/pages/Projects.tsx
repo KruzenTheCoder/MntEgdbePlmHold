@@ -1,6 +1,5 @@
 import React from 'react';
 import { Wrench, Home, Building, AlertTriangle } from 'lucide-react';
-import { buildUnsplashSrcSet, gallerySizes } from '@/lib/utils';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -9,42 +8,42 @@ const Projects: React.FC = () => {
       title: "Residential Bathroom Renovation",
       category: "Residential",
       description: "Complete bathroom plumbing overhaul with modern fixtures and water-saving solutions",
-      image: "https://images.unsplash.com/photo-1583432836338-a7ad99b8efb9?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       id: 2,
       title: "Commercial Kitchen Installation",
       category: "Commercial",
       description: "Full commercial kitchen plumbing system for restaurant including grease traps and industrial sinks",
-      image: "https://images.unsplash.com/photo-1543352634-20f7d4c43683?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.pexels.com/photos/3735416/pexels-photo-3735416.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       id: 3,
       title: "Emergency Pipe Repair",
       category: "Emergency",
       description: "24/7 emergency response to burst pipe, completed repair with minimal water damage",
-      image: "https://images.unsplash.com/photo-1521207419-76dc3a23c0f7?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.pexels.com/photos/6716890/pexels-photo-6716890.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       id: 4,
       title: "Water Heater Installation",
       category: "Residential",
       description: "Energy-efficient water heater installation with warranty and maintenance plan",
-      image: "https://images.unsplash.com/photo-1601972592825-2acf9812e062?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       id: 5,
       title: "Office Building Plumbing",
       category: "Commercial",
       description: "Multi-floor office building plumbing system installation and maintenance",
-      image: "https://images.unsplash.com/photo-1518432031267-5f8fa575a4c7?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.pexels.com/photos/534172/pexels-photo-534172.jpeg?auto=compress&cs=tinysrgb&w=1200"
     },
     {
       id: 6,
       title: "Drain Cleaning Service",
       category: "Emergency",
       description: "Advanced hydro-jetting technology used to clear severe drain blockages",
-      image: "https://images.unsplash.com/photo-1554215420-2166d2f0c3d0?auto=format&fit=crop&w=1200&q=80"
+      image: "https://images.pexels.com/photos/6716886/pexels-photo-6716886.jpeg?auto=compress&cs=tinysrgb&w=1200"
     }
   ];
 
@@ -124,23 +123,7 @@ const Projects: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredProjects.map((project) => (
                 <div key={project.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="aspect-w-4 aspect-h-3 bg-gray-200">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover"
-                      loading="lazy"
-                      decoding="async"
-                      width={800}
-                      height={600}
-                      srcSet={buildUnsplashSrcSet(project.image)}
-                      sizes={gallerySizes}
-                      onError={(e) => {
-                        const target = e.target as HTMLImageElement;
-                        target.src = `https://via.placeholder.com/400x300/e5e7eb/6b7280?text=${encodeURIComponent(project.title)}`;
-                      }}
-                    />
-                  </div>
+                  <div className="w-full h-48 bg-gradient-to-r from-blue-50 to-teal-50" />
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-3">
                       <span className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">

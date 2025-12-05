@@ -22,9 +22,9 @@ const Navigation: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <Wrench className="w-8 h-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">
+          <Link to="/" className="flex items-center space-x-3">
+            <img src="https://i.ibb.co/8DH9PpTf/Gemini-Generated-Image-5aedc85aedc85aed-removebg-preview.png" alt="MEPH Logo" className="w-9 h-9 rounded-md shadow-sm" loading="lazy" />
+            <span className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-teal-500">
               Mount Edgecombe Plumbling and Holdings
             </span>
           </Link>

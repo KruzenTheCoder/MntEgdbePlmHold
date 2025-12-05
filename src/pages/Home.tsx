@@ -1,4 +1,5 @@
 import React from 'react';
+import WaveBackground from '@/components/WaveBackground';
 import { Wrench, Droplets, Home as HomeIcon, Building, Phone, Users, Award, Clock } from 'lucide-react';
 
 const Home: React.FC = () => {
@@ -31,11 +32,12 @@ const Home: React.FC = () => {
       <section 
         className="relative bg-gradient-to-r from-blue-600 to-blue-800 text-white py-32"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 102, 204, 0.8), rgba(32, 178, 170, 0.8)), url('https://images.unsplash.com/photo-1583432836338-a7ad99b8efb9?auto=format&fit=crop&w=1600&q=80')`,
+          backgroundImage: `linear-gradient(rgba(0, 102, 204, 0.85), rgba(32, 178, 170, 0.85))`,
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
       >
+        <WaveBackground />
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
@@ -185,29 +187,7 @@ const Home: React.FC = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-100 p-8 rounded-lg">
-                <img
-                  src="https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=1200&q=80"
-                  alt="Mount Edgecombe Plumbling Team"
-                  className="w-full h-80 object-cover rounded-lg shadow-lg"
-                  loading="lazy"
-                  decoding="async"
-                  width={1200}
-                  height={600}
-                  srcSet={
-                    [
-                      'https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=480&q=70 480w',
-                      'https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=800&q=75 800w',
-                      'https://images.unsplash.com/photo-1582554685890-8db26a50db0b?auto=format&fit=crop&w=1200&q=80 1200w',
-                    ].join(', ')
-                  }
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `https://via.placeholder.com/800x600/e5e7eb/6b7280?text=Professional+Plumbing+Team`;
-                  }}
-                />
-              </div>
+              <div className="bg-gradient-to-br from-blue-50 to-teal-50 p-8 rounded-lg h-80 border border-blue-100" />
             </div>
           </div>
         </div>
